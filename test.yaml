@@ -6,7 +6,7 @@
 
   - name: test file creation
     file:
-      path: /tmp/"{ item }"
+      path: "/tmp/{ item }"
       state: touch
     with_items:
         - file1
