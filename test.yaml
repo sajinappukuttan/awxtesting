@@ -1,0 +1,14 @@
+---
+- name: testing awx 
+  hosts: all
+
+  tasks:
+
+  - name: test file creation
+    file:
+      path: /tmp/"{ item }"
+      state: touch
+    with_items:
+        - file1
+        - file2
+        - file3
